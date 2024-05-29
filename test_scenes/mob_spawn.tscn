@@ -1,0 +1,20 @@
+[gd_scene load_steps=7 format=3 uid="uid://ckroe1hxwl2k3"]
+
+[ext_resource type="PackedScene" uid="uid://bf13we8dy7nr7" path="res://player/player.tscn" id="1_cxqsu"]
+[ext_resource type="PackedScene" uid="uid://b7gltl2u02fm3" path="res://ui/game_manager_ui.tscn" id="1_i0dwq"]
+[ext_resource type="PackedScene" uid="uid://b4syvoxfiryu8" path="res://systems/mob_spawner.tscn" id="2_nqnuw"]
+[ext_resource type="PackedScene" uid="uid://ccmlanv7ikp74" path="res://enemies/goblin.tscn" id="3_rkf45"]
+[ext_resource type="PackedScene" uid="uid://drbupd3acyyva" path="res://enemies/pawn.tscn" id="4_rwqqw"]
+[ext_resource type="PackedScene" uid="uid://ds68mxrlu7ryh" path="res://enemies/sheep.tscn" id="5_4ujnd"]
+
+[node name="MobSpawn" type="Node2D"]
+
+[node name="GameManagerUI" parent="." instance=ExtResource("1_i0dwq")]
+
+[node name="Player" parent="." instance=ExtResource("1_cxqsu")]
+position = Vector2(408, 360)
+
+[node name="MobSpawner" parent="." instance=ExtResource("2_nqnuw")]
+scale = Vector2(0.987178, 1.00795)
+creatures = Array[PackedScene]([ExtResource("3_rkf45"), ExtResource("4_rwqqw"), ExtResource("5_4ujnd")])
+mobs_per_minute = 20
