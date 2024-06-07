@@ -60,6 +60,7 @@ radius = 11.8363
 height = 38.4645
 
 [node name="Sheep" type="CharacterBody2D" groups=["enemies"]]
+y_sort_enabled = true
 position = Vector2(0, -18)
 motion_mode = 1
 script = ExtResource("1_kagvp")

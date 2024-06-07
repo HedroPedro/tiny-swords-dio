@@ -56,10 +56,11 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nygpd"]
-radius = 22.9763
-height = 108.606
+radius = 13.2288
+height = 74.6663
 
 [node name="Goblin" type="CharacterBody2D" groups=["enemies"]]
+y_sort_enabled = true
 position = Vector2(0, -45)
 motion_mode = 1
 script = ExtResource("1_ee8yk")
@@ -74,7 +75,8 @@ autoplay = "new_animation"
 speed_scale = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -1)
+position = Vector2(0, 25)
+rotation = -1.5708
 scale = Vector2(1.43626, 0.883933)
 shape = SubResource("CapsuleShape2D_nygpd")
 

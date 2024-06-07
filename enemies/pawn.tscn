@@ -57,9 +57,10 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nygpd"]
 radius = 13.2288
-height = 56.5654
+height = 31.6766
 
 [node name="Pawn" type="CharacterBody2D" groups=["enemies"]]
+y_sort_enabled = true
 position = Vector2(0, -26)
 motion_mode = 1
 script = ExtResource("1_wrn7m")
@@ -73,7 +74,7 @@ frame_progress = 0.837882
 speed_scale = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -1)
+position = Vector2(0, 10)
 scale = Vector2(1.43626, 0.883933)
 shape = SubResource("CapsuleShape2D_nygpd")
 

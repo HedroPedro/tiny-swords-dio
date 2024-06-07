@@ -20,6 +20,5 @@ func _process(delta : float):
 	timer_label.text = "%02d:%02d" % [minutes, seconds]
 
 func on_meat_colleted(regeneration_value : int) -> void:
-	meat_counter = meat_counter + 0.5
-	print(meat_counter)
+	meat_counter += 1
 	meat_label.text = str(meat_counter)

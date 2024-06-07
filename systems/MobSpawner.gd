@@ -16,7 +16,7 @@ func _process(delta : float):
 	var creature_to_be_instantiated : PackedScene = creatures.pick_random()	
 	var creature_to_spawn := creature_to_be_instantiated.instantiate()
 	creature_to_spawn.global_position = get_point()
-	get_parent().add_child(creature_to_spawn)
+	get_tree().root.add_child(creature_to_spawn)
 
 func get_point() -> Vector2:
 	path_follow_2d.progress_ratio = randf()

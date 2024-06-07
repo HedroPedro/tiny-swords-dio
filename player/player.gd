@@ -26,7 +26,7 @@ var input_vect := Vector2(0, 0)
 var hitbox_cooldown := 0.0
 var ritual_interval := 30.0
 
-signal meat_colleted(regenration_value : int)
+signal meat_colleted(regeneration_value : int)
 
 func _ready():
 	GameManager.player = self
