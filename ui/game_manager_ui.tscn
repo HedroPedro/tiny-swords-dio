@@ -40,7 +40,7 @@ outline_color = Color(0, 0, 0, 0.658824)
 [node name="GameManagerUI" type="CanvasLayer"]
 script = ExtResource("1_8ngae")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="ItemsPainel" type="Panel" parent="."]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
@@ -52,7 +52,7 @@ grow_horizontal = 0
 scale = Vector2(2, 2.17391)
 theme_override_styles/panel = SubResource("StyleBoxTexture_nrsc2")
 
-[node name="MeatLabel" type="Label" parent="Panel"]
+[node name="MeatLabel" type="Label" parent="ItemsPainel"]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = -1
@@ -68,7 +68,7 @@ label_settings = SubResource("LabelSettings_msose")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="Panel"]
+[node name="TextureRect" type="TextureRect" parent="ItemsPainel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.659

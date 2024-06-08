@@ -10,6 +10,9 @@ func  _ready():
 	sprite = enemy.get_node("AnimatedSprite2D")
 
 func _physics_process(delta : float) -> void:
+	if GameManager.is_game_over:
+		return
+	
 	var difference := (GameManager.player_position - enemy.position).normalized()
 	enemy.velocity = difference * SPEED * delta * 10
 	enemy.move_and_slide()

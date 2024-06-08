@@ -31,6 +31,7 @@ signal meat_colleted(regeneration_value : int)
 func _ready():
 	GameManager.player = self
 	health_progress_bar.max_value = MAX_HEALTH
+	meat_colleted.connect(func(): GameManager.meat_count += 1)
 
 func _process(delta):
 	health_progress_bar.value = health
@@ -42,7 +43,6 @@ func _process(delta):
 	update_ritual(delta)
 	if Input.is_action_just_pressed("attack"):
 		attack()
-		
 
 func _physics_process(delta : float) -> void:
 	var targetVelocity =  input_vect * SPEED
@@ -59,7 +59,6 @@ func attack() -> void:
 	animationPlayer.play("attack_side_1")
 	attack_cooldown = 0.6
 	is_attacking = true
-	
 
 func change_animation() -> void:
 	# Animacao
@@ -147,6 +146,8 @@ func die() -> void:
 		var death_obj := death_prefab.instantiate()
 		death_obj.position = position
 		get_parent().add_child(death_obj)
+	GameManager.end_game()
+	
 	queue_free()
 
 func heal(amount : int) -> int:
